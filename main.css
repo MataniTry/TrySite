@@ -1,0 +1,324 @@
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    min-width: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+
+
+.navigation{
+    display: flex;
+    background-color: #FFFFFF;
+
+}
+
+.navigation a{
+    text-decoration: none;
+    color: black;
+}
+
+.logo{
+    margin: 20px auto 20px auto;
+}
+
+.left_nav{
+    margin-bottom: 42px;
+    margin-top: 42px;
+    margin-left: 20px;
+}
+
+.left_nav a{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icons{
+    display: flex;
+    float: right;
+    margin: 39px 20px 39px 0;
+
+}
+.icons a{
+    margin-bottom: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.icons img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*---------------------------------*/
+
+.offer{
+    color: white;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 100px;
+    line-height: 91px;
+}
+
+.instruction{
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+}
+
+.card{
+    display: flex;
+    background-color: #FF5050 ;
+    width: 378px;
+    height: auto;
+    margin: 100px auto 100px 200px;
+
+}
+.promo{
+    display: flex;
+    background-color: #FF5050;
+}
+
+
+.shop_btn a{
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    padding: 20px 44px 20px 44px;
+    background-color: white;
+}
+
+.clothes_img{
+    position: relative;
+    margin-left: auto;
+    background: #FF5050;
+}
+
+.second_img{
+    position: absolute;
+    bottom: 5vh;
+    left: 15vh;
+}
+
+/*-----------------------*/
+
+.spisok{
+    display: flex;
+
+}
+.text{
+    font-size: 50px;
+    width: 417px;
+    margin-top: 100px;
+    margin-left: auto;
+
+}
+.text mark{
+    background: none;
+    color: #FF5050;
+}
+
+.list{
+    margin-top: 107px;
+    float: left;
+    width: 500px;
+    margin-right: auto;
+}
+
+.list li{
+    color: #0D0D0D;
+    padding-top: 20px;
+    opacity: 0.6;
+    list-style-image: url("icons/point.svg");
+    padding-inline-start: 2ch;
+}
+
+/*--------------------*/
+
+.box{
+    display: flex;
+    margin-top: 100px;
+    background-color: #FFF6F6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.box_list{
+    margin-left: auto;
+    width: 480px;
+
+}
+
+
+
+.photos{
+    margin-left: 100px;
+    margin-right: auto;
+    grid-area: ph;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 3fr;
+    grid-template-rows: 2fr ;
+    grid-template-areas:
+            "p1 p2 p3"
+            "p4 p5 p6";
+}
+
+.p1{
+    grid-area: p1;
+}
+.p2{
+    grid-area: p2;
+}
+.p3{
+    grid-area: p3;
+}
+.p4{
+    grid-area: p4;
+}
+.p5{
+    grid-area: p5;
+}
+.p6{
+    grid-area: p6;
+}
+
+.box_list li{
+    list-style-image: url("icons/ok.svg");
+    color: #0D0D0D;
+    opacity: 0.6;
+    padding-inline-start: 2ch;
+    padding-bottom: 20px;
+}
+
+/*---------------------------*/
+.intro{
+    text-align: center;
+    color: #0D0D0D;
+    padding-bottom: 20px;
+    margin-top: 84px;
+    margin-bottom: 84px;
+}
+.intro mark{
+    background: none;
+    font-style: italic;
+}
+
+.item-cards{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+
+}
+
+.item img{
+    margin: 0 auto;
+}
+
+.item h1{
+    font-size: 19px;
+
+}
+.item + .item{
+    margin-left: 20px;
+}
+
+.item{
+    padding: 20px;
+    border: 1px solid red;
+    width: 387px;
+    height: 550px;
+}
+
+.button_buy a{
+    text-decoration: none;
+    color: white;
+    background-color: #FF5050;
+    padding: 10px 20px;
+}
+
+.button_buy a:hover{
+    color: #FF5050;
+    background-color: white;
+    transition: 0.5s ease-in-out;
+}
